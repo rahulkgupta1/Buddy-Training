@@ -24,7 +24,7 @@ export default function DashboardPage() {
         <main className="flex-1 overflow-y-auto p-6">
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-[#1E293B]">Welcome back, Pawan!</h1>
-            <p className="text-[#64748B] text-sm">Here's what's happening with your practice today.</p>
+            <p className="text-[#64748B] text-sm">Here&apos;s what&apos;s happening with your practice today.</p>
           </div>
 
           <StatsSection />

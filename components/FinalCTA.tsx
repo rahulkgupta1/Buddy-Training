@@ -31,7 +31,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
         >
-          Don't wait for the perfect moment. Take action today and transform your psychology degree into a thriving career.
+          Don&apos;t wait for the perfect moment. Take action today and transform your psychology degree into a thriving career.
         </motion.p>
 
         {/* Urgency Message */}

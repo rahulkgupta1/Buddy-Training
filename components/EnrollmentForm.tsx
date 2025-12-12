@@ -201,8 +201,8 @@ export default function EnrollmentForm() {
           onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panha-primary focus:border-transparent outline-none transition"
         >
-          <option value="bachelor">Bachelor's in Psychology</option>
-          <option value="master">Master's in Psychology</option>
+          <option value="bachelor">Bachelor&apos;s in Psychology</option>
+          <option value="master">Master&apos;s in Psychology</option>
           <option value="other">Other Psychology Program</option>
         </select>
       </div>

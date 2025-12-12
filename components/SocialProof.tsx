@@ -90,7 +90,7 @@ export default function SocialProof() {
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 mb-4 leading-relaxed text-xs sm:text-sm italic">"{testimonial.content}"</p>
+              <p className="text-gray-700 mb-4 leading-relaxed text-xs sm:text-sm italic">&ldquo;{testimonial.content}&rdquo;</p>
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-3 border-t border-gray-200">

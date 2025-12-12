@@ -30,7 +30,7 @@ export default function RegistrationSuccess() {
         
         <p className="mt-2 text-gray-600">
           Welcome to PANHA Buddy! Your profile has been created successfully.
-          You'll be redirected to your dashboard in a few seconds.
+          You&apos;ll be redirected to your dashboard in a few seconds.
         </p>
         
         <div className="mt-8">
