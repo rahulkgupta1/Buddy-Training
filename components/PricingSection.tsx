@@ -86,7 +86,7 @@ export default function PricingSection() {
               className="mb-6 sm:mb-8"
             >
               <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <span className="text-panha-primary">✓</span> What's Included
+                <span className="text-panha-primary">✓</span> What&apos;s Included
               </h4>
               
               {/* Features Grid - 2 Columns */}

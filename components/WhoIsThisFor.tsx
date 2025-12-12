@@ -47,7 +47,7 @@ export default function WhoIsThisFor() {
             <span className="gradient-text">Perfect for Psychology Students</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you're just starting or advancing your career, this program is designed for you
+            Whether you&apos;re just starting or advancing your career, this program is designed for you
           </p>
         </motion.div>
 

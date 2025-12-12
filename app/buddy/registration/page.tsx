@@ -143,7 +143,7 @@ export default function BuddyRegistration() {
       case 2:
         return <AreasOfExpertise formData={formData} setFormData={setFormData} />;
       case 3:
-        return <Availability formData={formData} setFormData={setFormData} />;
+        return <Availability formData={formData.availability} setFormData={setFormData} />;
       case 4:
         return <AboutYou formData={formData} handleChange={handleChange} />;
       default:

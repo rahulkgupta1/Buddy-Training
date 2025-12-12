@@ -1,4 +1,4 @@
-import { User, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const ProfileCompletion = () => {

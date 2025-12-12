@@ -32,7 +32,7 @@ export default function SuccessPage() {
           </h1>
 
           <p className="text-xl text-gray-600 mb-8">
-            Your enrollment has been confirmed. You're now part of our community of peer support professionals.
+            Your enrollment has been confirmed. You&apos;re now part of our community of peer support professionals.
           </p>
 
           {/* Next Steps */}
@@ -46,7 +46,7 @@ export default function SuccessPage() {
               <Mail className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-gray-900">Check Your Email</h3>
-                <p className="text-gray-600 text-sm">We've sent your login credentials and course access details</p>
+                <p className="text-gray-600 text-sm">We&apos;ve sent your login credentials and course access details</p>
               </div>
             </motion.div>
 
