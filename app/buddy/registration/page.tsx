@@ -65,7 +65,7 @@ export default function BuddyRegistration() {
 
   const handleSubmit = async () => {
     try {
-      // First, create a Razorpay order
+      // Submit the form data to your API
       const response = await fetch('/api/buddy/register', {
         method: 'POST',
         headers: {
@@ -78,26 +78,11 @@ export default function BuddyRegistration() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to create payment order');
+        throw new Error('Failed to submit registration');
       }
 
-      const orderData = await response.json();
-
-      // Load Razorpay script
-      const script = document.createElement('script');
-      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-      script.async = true;
-      script.onload = () => {
-        // @ts-ignore
-        const rzp = new window.Razorpay({
-          key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-          amount: orderData.amount,
-          currency: orderData.currency,
-          order_id: orderData.id,
-          name: 'PANHA Buddy Program',
-          description: 'Complete your registration as a PANHA Buddy',
-          handler: function (response: any) {
-            // Handle successful payment
+      // Redirect to success page or show success message
+      router.push('/registration/success');
             console.log('Payment successful:', response);
             // Redirect to success page with payment details
             router.push('/buddy/registration/success');
