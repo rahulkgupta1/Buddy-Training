@@ -9,7 +9,6 @@ import PricingSection from '@/components/PricingSection'
 import SocialProof from '@/components/SocialProof'
 import FAQSection from '@/components/FAQSection'
 import FinalCTA from '@/components/FinalCTA'
-import BackToTop from '@/components/BackToTop'
 import StickyCTA from '@/components/StickyCTA'
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <SocialProof />
       <FAQSection />
       <FinalCTA />
-      <BackToTop />
       <StickyCTA />
     </main>
   )

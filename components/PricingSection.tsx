@@ -1,9 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
-import EnrollmentModal from './EnrollmentModal'
 
 const features = [
   'Access to all 10 modules with video content',
@@ -25,7 +23,9 @@ const paymentFeatures = [
 ]
 
 export default function PricingSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const handleEnrollClick = () => {
+    window.open('https://payments.cashfree.com/forms/Buddytraining', '_blank');
+  };
 
   return (
     <section id="pricing" className="py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -141,10 +141,10 @@ export default function PricingSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setIsModalOpen(true)}
-              className="w-full bg-gradient-to-r from-panha-dark to-panha-primary text-white py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 mb-3"
+              onClick={handleEnrollClick}
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-panha-dark to-panha-primary text-white px-6 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-panha-primary/30 transition-all duration-300 transform hover:-translate-y-1"
             >
-              Secure Your Spot - Enroll Now
+              Enroll Now
             </motion.button>
 
             {/* Trust Message */}
@@ -175,9 +175,6 @@ export default function PricingSection() {
             <p className="text-gray-600 text-xs sm:text-sm">Earned by Graduates</p>
           </div>
         </motion.div>
-
-        {/* Enrollment Modal */}
-        <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   )

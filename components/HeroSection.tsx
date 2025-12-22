@@ -1,15 +1,15 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle } from 'lucide-react'
-import EnrollmentModal from './EnrollmentModal'
 
 export default function HeroSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const handleEnrollClick = () => {
+    window.open('https://payments.cashfree.com/forms/Buddytraining', '_blank');
+  };
 
   return (
-    <section className="relative w-full min-h-[80vh] bg-white flex items-center overflow-hidden pt-4 pb-8 sm:pt-6 sm:pb-12 lg:pt-4 lg:pb-12">
+    <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] bg-white flex items-center overflow-hidden pt-4 pb-8 sm:pt-6 sm:pb-12 lg:pt-4 lg:pb-12">
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-4 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -65,11 +65,11 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-panha-dark to-panha-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={handleEnrollClick}
+                className="group flex items-center justify-center gap-2 bg-gradient-to-r from-panha-dark to-panha-primary text-white px-6 py-4 rounded-lg font-bold text-lg hover:shadow-lg hover:shadow-panha-primary/30 transition-all duration-300 transform hover:-translate-y-1"
               >
-                Enroll Now for ₹3,999
-                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
+                Enroll Now
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -106,12 +106,12 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Visual - Mobile App Image */}
+          {/* Right Visual - Mobile App Image - Hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="relative hidden md:flex items-center justify-center"
           >
             <div className="relative w-full max-w-md">
               <img 
@@ -123,9 +123,6 @@ export default function HeroSection() {
             </div>
           </motion.div>
         </div>
-
-        {/* Enrollment Modal */}
-        <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   )
