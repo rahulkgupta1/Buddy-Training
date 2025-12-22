@@ -202,9 +202,9 @@
 │ Degree Level *                         │
 │ [Bachelor's ▼]                         │
 │                                        │
-│ [Pay ₹3,999 & Enroll Now]              │
+│ [Enroll Now]                           │
 │                                        │
-│ Secure payment powered by Razorpay     │
+│ Start your learning journey today!     │
 │                                        │
 └────────────────────────────────────────┘
 ```
@@ -269,13 +269,12 @@
 - **Tablet**: 640px - 1024px
 - **Desktop**: > 1024px
 
-## 💳 Payment Features
+## 💳 Enrollment
 
-### Payment Gateway
-- **Provider**: Razorpay
-- **Amount**: ₹3,999
-- **Currency**: INR
-- **Methods**: Card, UPI, Wallet, etc.
+### Get Started
+- **Start Learning**: Enroll now
+- **Access**: Full course materials
+- **Support**: Dedicated assistance
 
 ### Security
 - ✅ HMAC-SHA256 signature verification
@@ -308,7 +307,7 @@
 | Animations | Framer Motion |
 | Icons | Lucide React |
 | Forms | React Hook Form |
-| Payments | Razorpay |
+| Payments | Not Required |
 | HTTP | Axios |
 | Language | TypeScript |
 
