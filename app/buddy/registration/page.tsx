@@ -81,40 +81,8 @@ export default function BuddyRegistration() {
         throw new Error('Failed to submit registration');
       }
 
-      // Redirect to success page or show success message
-      router.push('/registration/success');
-            console.log('Payment successful:', response);
-            // Redirect to success page with payment details
-            router.push('/buddy/registration/success');
-          },
-          prefill: {
-            name: formData.fullName,
-            contact: formData.phone,
-            email: 'user@example.com', // You should get this from the form or user session
-          },
-          notes: {
-            registrationType: 'buddy',
-          },
-          theme: {
-            color: '#2563eb', // Matching your brand color
-          },
-          modal: {
-            ondismiss: function() {
-              // Handle when user closes the payment form
-              console.log('Payment form closed');
-            }
-          }
-        });
-
-        rzp.on('payment.failed', function(response: any) {
-          console.error('Payment failed:', response.error);
-          alert('Payment failed. Please try again.');
-        });
-
-        rzp.open();
-      };
-      document.body.appendChild(script);
-      
+      // Redirect to success page
+      router.push('/buddy/registration/success');
     } catch (error) {
       console.error('Error during registration:', error);
       alert('An error occurred. Please try again.');
