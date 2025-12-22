@@ -1,12 +1,16 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 
 export default function StickyCTA() {
   const [isVisible, setIsVisible] = useState(false)
   const [isHomePage, setIsHomePage] = useState(false)
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false)
+  
+  const handleEnrollClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://payments.cashfree.com/forms/Buddytraining', '_blank');
+  };
 
   useEffect(() => {
     // Check if we're on home page
@@ -95,17 +99,18 @@ export default function StickyCTA() {
 
   return (
     <div 
-      className="fixed z-50 backdrop-blur-lg border border-gray-600 shadow-xl transition-all duration-300 ease-out rounded-3xl"
+      className="fixed z-50 backdrop-blur-lg border border-gray-600 shadow-xl transition-all duration-300 ease-out rounded-2xl sm:rounded-3xl"
       style={{
-        width: '786.013px',
-        bottom: '10px',
+        width: 'calc(100% - 1rem)',
+        maxWidth: '786.013px',
+        bottom: '0.5rem',
         left: '50%',
         transform: 'translateX(-50%)',
-        backgroundColor: 'rgba(45, 45, 45, 0.85)'
+        backgroundColor: 'rgba(45, 45, 45, 0.95)'
       }}
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-5">
+      <div className="w-full px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-2 sm:py-4">
           {/* Left Section - Panha Logo and Course Info */}
           <div className="flex items-center space-x-3">
             {/* Panha Logo */}
@@ -113,26 +118,21 @@ export default function StickyCTA() {
               <img 
                 src="https://www.panhacare.com/logo-light.svg" 
                 alt="PANHA Logo" 
-                className="h-10 w-auto"
+                className="h-8 w-auto sm:h-10"
               />
             </div>
 
-            {/* Course Info */}
-            <div>
+            {/* Course Info - Only show on larger screens */}
+            <div className="hidden sm:block ml-2">
               <h3 className="font-bold text-white text-lg leading-tight">Buddy Training</h3>
-              <p className="text-sm text-gray-100 flex items-center">
-                <svg className="w-4 h-4 mr-1 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                1K+ Students Enrolled
-              </p>
+              <p className="text-sm text-gray-100">1K+ Students Enrolled</p>
             </div>
           </div>
 
           {/* Right Section - Price and CTA */}
-          <div className="flex items-center space-x-4">
-            {/* Price */}
-            <div className="text-right hidden sm:block">
+          <div className="flex items-center space-x-3">
+            {/* Price - Desktop */}
+            <div className="hidden sm:block text-right">
               <div className="flex items-center space-x-2">
                 <span className="text-gray-200 line-through text-base">₹5,999.00</span>
                 <span className="text-2xl font-bold text-white">₹3,999.00</span>
@@ -140,23 +140,23 @@ export default function StickyCTA() {
               <p className="text-sm text-yellow-300 font-medium">Save ₹2,000</p>
             </div>
 
-            {/* Mobile Price */}
-            <div className="text-right sm:hidden">
+            {/* Price - Mobile - Simplified */}
+            <div className="sm:hidden text-right">
               <div className="flex items-center space-x-1">
-                <span className="text-gray-200 line-through text-sm">₹5,999</span>
-                <span className="text-xl font-bold text-white">₹3,999</span>
+                <span className="text-gray-200 line-through text-xs">₹5,999</span>
+                <span className="text-sm font-bold text-white">₹3,999</span>
               </div>
             </div>
 
             {/* CTA Button */}
-            <Link 
-              href="#enroll"
-              className="relative bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 whitespace-nowrap text-base sm:text-lg overflow-hidden group"
+            <button 
+              onClick={handleEnrollClick}
+              className="relative bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 whitespace-nowrap overflow-hidden group min-w-[100px]"
             >
               <span className="relative z-10">Enroll Now</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 transform -skew-x-12 -translate-x-full group-hover:translate-x-0"></div>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

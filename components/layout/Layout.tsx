@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import StickyCTA from '../StickyCTA';
-import BackToTop from '../BackToTop';
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,7 +16,6 @@ export default function Layout({ children }: LayoutProps) {
       </main>
       <Footer />
       <StickyCTA />
-      <BackToTop />
     </div>
   );
 }

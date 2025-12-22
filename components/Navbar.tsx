@@ -1,6 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Navbar() {
+  const handleEnrollClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://payments.cashfree.com/forms/Buddytraining', '_blank');
+  };
   return (
     <nav className="bg-white/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,12 +32,12 @@ export default function Navbar() {
             <Link href="#pricing" className="text-gray-700 hover:text-[#1a3e8c] font-medium transition-colors">
               Benefits
             </Link>
-            <Link 
-              href="#enroll" 
+            <button 
+              onClick={handleEnrollClick}
               className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-4 py-2 rounded-md font-medium hover:opacity-90 transition-opacity"
             >
               Enroll Now
-            </Link>
+            </button>
           </div>
           <div className="md:hidden flex items-center">
             <button className="text-gray-700 hover:text-indigo-600">
