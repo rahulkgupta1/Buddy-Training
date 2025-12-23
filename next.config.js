@@ -5,7 +5,7 @@
 // };
 
 // module.exports = nextConfig;
-/** @type {import('next').NextConfig} */
+
 const nextConfig = {
   output: 'export',           // REQUIRED for GitHub Pages
   reactStrictMode: true,
