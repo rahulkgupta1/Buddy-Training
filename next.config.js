@@ -1,7 +1,19 @@
 /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+//   swcMinify: true,
+// };
+
+// module.exports = nextConfig;
+
 const nextConfig = {
+  output: 'export',           // REQUIRED for GitHub Pages
   reactStrictMode: true,
-  swcMinify: true,
+  images: {
+    unoptimized: true,        // REQUIRED for GitHub Pages
+  },
 };
 
 module.exports = nextConfig;
+
+

@@ -115,7 +115,11 @@ export default function HeroSection() {
           >
             <div className="relative w-full max-w-md">
               <img 
+<<<<<<< HEAD
                 src="/panha-image.png" 
+=======
+                src="/mobile-hero.a2503509.png" 
+>>>>>>> cf5825e651a1e000b0ebac693aed88ad1a9b2b05
                 alt="PANHA Care Mobile App"
                 className="w-full h-auto drop-shadow-2xl"
                 loading="lazy"
@@ -127,3 +131,5 @@ export default function HeroSection() {
     </section>
   )
 }
+
+
